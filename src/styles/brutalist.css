@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* Neo-Brutalist Global Styles */
+:root {
+  --brutalist-black: #000000;
+  --brutalist-white: #ffffff;
+  --brutalist-yellow: #ffff00;
+  --brutalist-pink: #ff00ff;
+  --brutalist-cyan: #00ffff;
+  --brutalist-green: #00ff00;
+  --brutalist-red: #ff0000;
+  --brutalist-blue: #0000ff;
+  --brutalist-gray: #808080;
+  --brutalist-shadow: 4px 4px 0px var(--brutalist-black);
+  --brutalist-shadow-hover: 6px 6px 0px var(--brutalist-black);
+  --brutalist-shadow-active: 2px 2px 0px var(--brutalist-black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 500;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brutalist Button Styles */
+.brutalist-btn {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 3px solid var(--brutalist-black);
+  box-shadow: var(--brutalist-shadow);
+  transition: all 0.1s ease;
+  cursor: pointer;
+  position: relative;
+  background: var(--brutalist-white);
+  color: var(--brutalist-black);
+}
+
+.brutalist-btn:hover {
+  box-shadow: var(--brutalist-shadow-hover);
+  transform: translate(-2px, -2px);
+}
+
+.brutalist-btn:active {
+  box-shadow: var(--brutalist-shadow-active);
+  transform: translate(2px, 2px);
+}
+
+.brutalist-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--brutalist-shadow);
+}
+
+/* Color Variants */
+.brutalist-btn-yellow {
+  background: var(--brutalist-yellow);
+  color: var(--brutalist-black);
+}
+
+.brutalist-btn-pink {
+  background: var(--brutalist-pink);
+  color: var(--brutalist-black);
+}
+
+.brutalist-btn-cyan {
+  background: var(--brutalist-cyan);
+  color: var(--brutalist-black);
+}
+
+.brutalist-btn-green {
+  background: var(--brutalist-green);
+  color: var(--brutalist-black);
+}
+
+.brutalist-btn-red {
+  background: var(--brutalist-red);
+  color: var(--brutalist-white);
+}
+
+.brutalist-btn-black {
+  background: var(--brutalist-black);
+  color: var(--brutalist-white);
+}
+
+/* Brutalist Input Styles */
+.brutalist-input {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 500;
+  border: 3px solid var(--brutalist-black);
+  box-shadow: var(--brutalist-shadow);
+  background: var(--brutalist-white);
+  color: var(--brutalist-black);
+  padding: 12px 16px;
+  font-size: 16px;
+  transition: all 0.1s ease;
+}
+
+.brutalist-input:focus {
+  outline: none;
+  box-shadow: var(--brutalist-shadow-hover);
+  transform: translate(-1px, -1px);
+}
+
+.brutalist-input::placeholder {
+  color: var(--brutalist-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Brutalist Card Styles */
+.brutalist-card {
+  border: 3px solid var(--brutalist-black);
+  box-shadow: var(--brutalist-shadow);
+  background: var(--brutalist-white);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.brutalist-card:hover {
+  box-shadow: var(--brutalist-shadow-hover);
+  transform: translate(-2px, -2px);
+}
+
+.brutalist-card-header {
+  border-bottom: 3px solid var(--brutalist-black);
+  padding: 16px 20px;
+  background: var(--brutalist-yellow);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.brutalist-card-content {
+  padding: 20px;
+}
+
+/* Brutalist Container */
+.brutalist-container {
+  background: var(--brutalist-white);
+  min-height: 100vh;
+  position: relative;
+}
+
+.brutalist-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(90deg, var(--brutalist-black) 1px, transparent 1px),
+    linear-gradient(var(--brutalist-black) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.brutalist-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Brutalist Typography */
+.brutalist-title {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--brutalist-black);
+  text-shadow: 3px 3px 0px var(--brutalist-yellow);
+  line-height: 1.1;
+}
+
+.brutalist-subtitle {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--brutalist-black);
+}
+
+.brutalist-text {
+  font-family: 'Space Grotesk', monospace;
+  font-weight: 500;
+  color: var(--brutalist-black);
+  line-height: 1.4;
+}
+
+/* Brutalist Checkbox */
+.brutalist-checkbox {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--brutalist-black);
+  background: var(--brutalist-white);
+  cursor: pointer;
+  position: relative;
+  box-shadow: 2px 2px 0px var(--brutalist-black);
+  transition: all 0.1s ease;
+}
+
+.brutalist-checkbox:checked {
+  background: var(--brutalist-green);
+}
+
+.brutalist-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--brutalist-black);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.brutalist-checkbox:hover {
+  box-shadow: 3px 3px 0px var(--brutalist-black);
+  transform: translate(-1px, -1px);
+}
+
+/* Brutalist List */
+.brutalist-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brutalist-list-item {
+  border: 3px solid var(--brutalist-black);
+  background: var(--brutalist-white);
+  margin-bottom: 8px;
+  box-shadow: var(--brutalist-shadow);
+  transition: all 0.1s ease;
+}
+
+.brutalist-list-item:hover {
+  box-shadow: var(--brutalist-shadow-hover);
+  transform: translate(-1px, -1px);
+}
+
+.brutalist-list-item.completed {
+  background: var(--brutalist-gray);
+  opacity: 0.7;
+}
+
+.brutalist-list-item.completed .brutalist-text {
+  text-decoration: line-through;
+}
+
+/* Brutalist Animations */
+.brutalist-bounce {
+  animation: brutalist-bounce 0.3s ease;
+}
+
+@keyframes brutalist-bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.brutalist-shake {
+  animation: brutalist-shake 0.5s ease;
+}
+
+@keyframes brutalist-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.brutalist-slide-in {
+  animation: brutalist-slide-in 0.3s ease;
+}
+
+@keyframes brutalist-slide-in {
+  0% { 
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.brutalist-slide-out {
+  animation: brutalist-slide-out 0.3s ease;
+}
+
+@keyframes brutalist-slide-out {
+  0% { 
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% { 
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .brutalist-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .brutalist-input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .brutalist-card-header {
+    padding: 12px 16px;
+  }
+  
+  .brutalist-card-content {
+    padding: 16px;
+  }
+  
+  :root {
+    --brutalist-shadow: 3px 3px 0px var(--brutalist-black);
+    --brutalist-shadow-hover: 4px 4px 0px var(--brutalist-black);
+    --brutalist-shadow-active: 1px 1px 0px var(--brutalist-black);
+  }
+}
+
+/* Utility Classes */
+.brutalist-border {
+  border: 3px solid var(--brutalist-black);
+}
+
+.brutalist-shadow {
+  box-shadow: var(--brutalist-shadow);
+}
+
+.brutalist-shadow-hover {
+  box-shadow: var(--brutalist-shadow-hover);
+}
+
+.brutalist-bg-yellow {
+  background: var(--brutalist-yellow);
+}
+
+.brutalist-bg-pink {
+  background: var(--brutalist-pink);
+}
+
+.brutalist-bg-cyan {
+  background: var(--brutalist-cyan);
+}
+
+.brutalist-bg-green {
+  background: var(--brutalist-green);
+}
+
+.brutalist-bg-red {
+  background: var(--brutalist-red);
+}
+
+.brutalist-bg-black {
+  background: var(--brutalist-black);
+}
+
+.brutalist-bg-white {
+  background: var(--brutalist-white);
+}
+
+.brutalist-text-black {
+  color: var(--brutalist-black);
+}
+
+.brutalist-text-white {
+  color: var(--brutalist-white);
+}
